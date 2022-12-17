@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,7 +9,7 @@
     android:layout_marginEnd="20dp"
     android:layout_marginBottom="20dp"
     app:cardCornerRadius="8dp">
-    
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -37,7 +38,7 @@
             app:layout_constraintTop_toBottomOf="@id/tv_title"
             android:layout_marginTop="11dp"
             />
-        
+
         <ImageView
             android:id="@+id/iv_time"
             android:layout_width="19dp"
@@ -86,6 +87,33 @@
             android:layout_marginBottom="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
             />
+
+        <ProgressBar
+            android:id="@+id/circularprogressbar"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            style="@style/CircularDeterminateProgressBar"
+            app:layout_constraintStart_toEndOf="@id/tv_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_text"
+            app:layout_constraintBottom_toBottomOf="@id/tv_text"
+            app:cpb_background_progressbar_color="#00C108"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/circle"
+            android:progress="60"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60%"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/circularprogressbar"
+            app:layout_constraintEnd_toEndOf="@+id/circularprogressbar"
+            app:layout_constraintStart_toStartOf="@+id/circularprogressbar"
+            app:layout_constraintTop_toTopOf="@+id/circularprogressbar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

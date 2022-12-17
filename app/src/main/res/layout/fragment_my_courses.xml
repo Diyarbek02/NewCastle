@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="Mening kurslarim"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="26dp"
